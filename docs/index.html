@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head lang="ja">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta description="汎用短縮URLジェネレータです。URL Shorter">
+		<title>汎用短縮URLジェネレータ</title>
+		<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="deflate.js"></script>
+		<script src="inflate.js"></script>
+		<script src="main.js"></script>
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-101529000-3"></script>
+		<script>
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments)};
+  gtag('js', new Date());
+
+    gtag('config', 'UA-101529000-3');
+		</script>
+		<link href="style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="jumbotron">
+			<div class="container">
+				<h1>汎用短縮URLジェネレータ</h1>
+				<p id="comment">JavaScriptによる簡易的な汎用短縮URL生成ジェネレータです。</p>
+			</div>
+		</div>
+		<div class="container">
+			<div class="alert alert-success">短縮したいURLを入力してください。</div>
+			<input type="text" class="form-control" id="url" placeholder="短くしたいURL">
+			<br />
+			<div class="alert alert-success">短縮したURLは以下の通りです。</div>
+			<input type="text" readonly class="form-control" id="shorturl" placeholder="短縮URL">
+			<button id="copy" class="btn btn-primary" onclick="clipboadCopy('shorturl')">クリップボードにコピー</button>
+
+			<p>広告</p>
+			<hr />
+		</div>
+
+		<br />
+
+		<div class="jumbotron">
+			<div class="container">
+				<h3>使い方</h3>
+				<ul>
+					<li>短縮したいURLを入力すると、短縮したURLが自動生成されます。</li>
+					<li>短縮URLはサーバーに保存されたりはしません。</li>
+				</ul>
+			</div>
+		</div>
+		<div class="jumbotron">
+			<div class="container">
+				<h3>謝辞</h3>
+				<ul>
+					<li>参考サイト <a href=http://setchi.hatenablog.com/entry/2013/11/09/114432>JavaScriptで文字列を圧縮する</a>
+					<li>ちょっとでもこのアプリに興味を持っていただいたみなさま</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="jumbotron">
+			<div class="container">
+				<h3>本ツールについて</h3>
+				<ul>
+					<li>ソースコードはGithub上で公開しています。<a href="https://github.com/gelehrtecrest/ohalala-ss-generator" target="_blank">https://github.com/gelehrtecrest/surl</a></li>
+					<li>本ツールのclone及び可変・再配布などはご自由に。</li>
+					<li>その他お問い合わせなどは <a href="https://twitter.com/gelehrte_crest" target="_blank">@gelehrte_crest</a>へレスもしくはDMお願いします。</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="jumbotron">
+			<div class="container">
+				<h3>更新履歴</h3>
+				<ul>
+					<li> 2017/05/13 公開開始</li>
+				</ul>
+			</div>
+		</div>
+	</body>
+</html>
